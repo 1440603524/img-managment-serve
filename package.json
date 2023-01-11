@@ -23,7 +23,8 @@
     "egg-ci": "^2",
     "egg-mock": "^5",
     "eslint": "^8",
-    "eslint-config-egg": "^12"
+    "eslint-config-egg": "^12",
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "engines": {
     "node": ">=16.0.0"

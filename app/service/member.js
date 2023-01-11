@@ -6,7 +6,7 @@ class MemberService extends Service {
   async findList(id) {
     const { app } = this;
     return await app.model.User.findAll({
-      attributes: [ 'id', 'member.status', 'userName' ],
+      attributes: ['id', 'member.status', 'userName'],
       include: {
         model: app.model.Member,
         attributes: [],
@@ -53,7 +53,7 @@ class MemberService extends Service {
       where: {
         userName: memberName,
       },
-      attributes: [ 'id', 'member.status', 'userName' ],
+      attributes: ['id', 'member.status', 'userName'],
       include: {
         model: app.model.Member,
         attributes: [],

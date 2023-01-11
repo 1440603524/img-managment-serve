@@ -29,7 +29,7 @@ class ProjectService extends Service {
     const { app } = this;
     return await app.model.Project.findAll({
       limit: 10,
-      orders: [[ 'lastEditTime', 'desc' ]],
+      orders: [['lastEditTime', 'desc']],
       raw: true,
     });
   }
@@ -41,10 +41,10 @@ class ProjectService extends Service {
       where: {
         ownerName,
       },
-      columns: [ 'id', 'projectName' ],
+      columns: ['id', 'projectName'],
       raw: true,
     }) : await app.model.Project.findAll({
-      columns: [ 'id', 'projectName' ],
+      columns: ['id', 'projectName'],
       raw: true,
     });
   }

@@ -1,7 +1,7 @@
 {
-  "extends": "eslint-config-egg",
+  "extends": ["eslint-config-egg", "prettier"],
   "root": true,
   "rules": {
-    "linebreak-style": ["error", "unix"]
+    "prettier/prettier": "error"
   }
 }
