@@ -112,6 +112,23 @@ class FileController extends Controller {
       };
     }
   }
+
+  async recentFile() {
+    const { ctx } = this;
+    const fileList = await ctx.service.file.findRecentList();
+    if (fileList.length) {
+      ctx.body = {
+        code: 200,
+        data: fileList,
+        message: '查询成功',
+      };
+      return;
+    }
+    ctx.body = {
+      code: 400,
+      message: '服务出错，请稍后再试',
+    };
+  }
 }
 
 module.exports = FileController;

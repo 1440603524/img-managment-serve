@@ -16,7 +16,7 @@ class UserService extends Service {
   async register(userName, password) {
     const { app } = this;
     return await app.model.User.create({
-      user_name: userName,
+      userName: userName,
       password,
     });
   }

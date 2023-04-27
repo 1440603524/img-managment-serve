@@ -9,4 +9,5 @@ module.exports = app => {
   router.post('/file/add', jwtErr, controller.file.addFile);
   router.get('/file/list', jwtErr, controller.file.fileList);
   router.post('/file/update', jwtErr, controller.file.updateFile);
+  router.get('/file/recent', jwtErr, controller.file.recentFile);
 };

@@ -52,6 +52,15 @@ class FileService extends Service {
     });
   }
 
+  async findRecentList() {
+    const { app } = this;
+    return await app.model.File.findAll({
+      limit: 10,
+      orders: [['lastEditTime', 'desc']],
+      raw: true,
+    });
+  }
+
   async findOneByName(fileName) {
     const { app } = this;
     return await app.model.File.findOne({

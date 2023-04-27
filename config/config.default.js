@@ -57,7 +57,11 @@ module.exports = appInfo => {
   };
   config.oss = {
     client: {
-     
+      accessKeyId: 'LTAI5tJcSM9bqo8TTWyVXhia',
+      accessKeySecret: 'x',
+      bucket: 'file-management-tissue',
+      region: 'oss-cn-shenzhen',
+      endpoint: 'oss-cn-shenzhen.aliyuncs.com',
     },
   };
 
